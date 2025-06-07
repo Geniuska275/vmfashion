@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1>
+      {/* <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1> */}
       <div className=" sticky top-0 z-[1000]">
 
       {/* Header */}
