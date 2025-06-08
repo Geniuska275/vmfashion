@@ -1,125 +1,181 @@
-"use client"
+
 
 import { useState } from "react"
 import { Heart } from "lucide-react"
+import image3 from "../images/p8.jpg"
+import image2 from "../images/p17.jpg"
+import image1 from "../images/p18.jpg"
+import image4 from "../images/p10.jpg"
+import image5 from "../images/p21.jpg"
+import image6 from "../images/p20.jpg"
+import image7 from "../images/p23.webp"
+import image8 from "../images/p24.webp"
+import image9 from "../images/p25.webp"
+import image10 from "../images/p26.webp"
+import image11 from "../images/p27.webp"
+import image12 from "../images/p28.webp"
+import image13 from "../images/p29.webp"
+import image14 from "../images/p30.webp"
+
+
+
+
+
+
+
+
+
+
+
+
 
 const products = [
   {
     id: 1,
-    name: "Gray gardigan,blue jeans and a pair of brown chunky heeled shoes",
-    image: "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2xvdGhpbmd8ZW58MHx8MHx8fDA%3D",
-    originalPrice: "£181",
-    salePrice: "£139",
-    discount: "23% Off",
+    name: "Net Light Beige Sequins Embroidered Indo-Western Saree For Eid",
+    image: image1,
+    originalPrice: "£194",
+    salePrice: "£149",
+    discount: "30% Off",
     colors: ["#F4D03F", "#E8DAEF", "#F8C471"],
     fastDelivery: true,
   },
   {
     id: 2,
-    name: "white crew neck t-shirt",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNsb3RoaW5nfGVufDB8fDB8fHww",
-    originalPrice: "£129",
-    salePrice: "£99",
+    name: "Light Beige Net Sequins Embroidered Cocktail And Eid Saree",
+    image: image2,
+    originalPrice: "£109",
+    salePrice: "£84",
     discount: "23% Off",
     colors: ["#1B4F72", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 3,
-    name: "nice female brown shorts",
-    image: "https://media.istockphoto.com/id/2180316537/photo/beautiful-girl-against-the-background-of-white-houses-of-santorini.webp?a=1&b=1&s=612x612&w=0&k=20&c=a5NTXFZbD0yUBu3jKxxdZqYSaKSHPQviQE9BJAbS48E=",
-    originalPrice: "£219",
-    salePrice: "£149",
-    discount: "32% Off",
+    name: "Black Velvet Zari Embroidered Dhoti Pant Style Saree for Eid",
+    image:image3,
+    originalPrice: "£168",
+    salePrice: "£129",
+    discount: "23% Off",
     colors: ["#F1948A", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 4,
-    name: "A beautiful Athletic wear",
-    image: "https://media.istockphoto.com/id/2186993507/photo/young-woman-in-athletic-wear-sitting-on-fitness-ball.jpg?s=612x612&w=0&k=20&c=kFzahgIrG1gE-Y7l0sbmT0f-ln-XF6smFqmJOm1WG3w=",
-    originalPrice: "£199",
-    salePrice: "£119",
-    discount: "40% Off",
+    name: "Soft Silk Pink Indo-Western Saree",
+    image:image4 ,
+    originalPrice: "£265",
+    salePrice: "£199",
+    discount: "25% Off",
     colors: ["#D5DBDB", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 5,
-    name: "Men’s Classic Denim Jacket",
-    image: "https://images.unsplash.com/photo-1711888386245-9ca3477a5977?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmFzaGlvbiUyMG1hbGV8ZW58MHx8MHx8fDA%3D",
-    originalPrice: "£195",
-    salePrice: "£149",
+    name: "Mustard Yellow Satin Pant Style Saree For Eid",
+    image: image5,
+    originalPrice: "£221",
+    salePrice: "£169",
     discount: "24% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
     {
     id: 6,
-    name: "Plain orange suit with white trouser",
-    image: "https://media.istockphoto.com/id/2188521577/photo/a-lot-of-work-for-today.webp?a=1&b=1&s=612x612&w=0&k=20&c=zvcMacVlZQ3OpTEGfeqocbjshha5ljFuobfjIxV4oFk=",
-    originalPrice: "£199",
-    salePrice: "£119",
-    discount: "40% Off",
+    name: "Prussian Blue Embroidered Party Wear Silk Ombre Saree",
+    image: image6,
+    originalPrice: "£222",
+    salePrice: "£139",
+    discount: "37% Off",
     colors: ["#D5DBDB", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 7,
-    name: "A yellow female tracksuit",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    originalPrice: "£195",
-    salePrice: "£149",
-    discount: "24% Off",
+    name: "Sage Green Net Sequins Embroidered Fancy Eid Saree",
+    image: image7,
+    originalPrice: "£779",
+    salePrice: "£599",
+    discount: "23% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
     {
     id: 8,
-    name: "Female sweater ",
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    originalPrice: "£199",
-    salePrice: "£119",
-    discount: "40% Off",
+    name: "Dark Maroon Net Sequins Embroidered Heavy Saree ",
+    image: image8,
+    originalPrice: "£174",
+    salePrice: "£129",
+    discount: "26% Off",
     colors: ["#D5DBDB", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 9,
-    name: "a female white handless top with a black stripped trouser",
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
-    originalPrice: "£195",
-    salePrice: "£149",
-    discount: "24% Off",
+    name: "Soft Silk Salmon Peach Indo-Western Saree",
+    image: image9,
+    originalPrice: "£265",
+    salePrice: "£199",
+    discount: "25% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
     {
     id: 10,
-    name: "A pair of black boots and a pink jacket",
-    image: "https://plus.unsplash.com/premium_photo-1675186049419-d48f4b28fe7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D",
-    originalPrice: "£195",
-    salePrice: "£149",
+    name: "Soft Silk Mint Blue Indo-Western Saree",
+    image:image10,
+    originalPrice: "£265",
+    salePrice: "£199",
     discount: "24% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 11,
-    name: "A Gray long sleeve shirt",
-    image: "https://images.unsplash.com/photo-1601762603339-fd61e28b698a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
-    originalPrice: "£199",
-    salePrice: "£119",
-    discount: "40% Off",
+    name: "Sequins Embroidered Off White Heavy Georgette Saree",
+    image: image11,
+    originalPrice: "£126",
+    salePrice: "£79",
+    discount: "37% Off",
     colors: ["#D5DBDB", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
   {
     id: 12,
-    name: "A Cream blazer",
-    image: "https://images.unsplash.com/photo-1571513722275-4b41940f54b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGZhc2hpb258ZW58MHx8MHx8fDA%3D",
-    originalPrice: "£195",
-    salePrice: "£149",
+    name: "Embroidered Satin Silk Grey Beige Bollywood Saree",
+    image: image12,
+    originalPrice: "£167",
+    salePrice: "£139",
+    discount: "17% Off",
+    colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
+    fastDelivery: true,
+  },
+  {
+    id: 13,
+    name: "Black Georgette Party Wear Saree with Sequins & Sleeveless Blouse",
+    image: image13,
+    originalPrice: "£133",
+    salePrice: "£109",
+    discount: "18% Off",
+    colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
+    fastDelivery: true,
+  },
+  {
+    id: 14,
+    name: "Light Peach Net Sequins Embroidered Heavy Saree",
+    image: image14,
+    originalPrice: "£163",
+    salePrice: "£129",
+    discount: "21% Off",
+    colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
+    fastDelivery: true,
+  },
+  {
+    id: 15,
+    name: "Dusty Pink Satin Lace Embroidered Light Weight Saree",
+    image: image12,
+    originalPrice: "£91",
+    salePrice: "£69",
     discount: "24% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
