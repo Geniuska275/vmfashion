@@ -7,7 +7,7 @@ function Logo() {
       <div className="relative w-24 h-24">
          <img src={image} alt="VM Fashion Logo" className="object-contain w-full h-full" />
       </div>
-      <h1 className="md:ml-5 font-playfair text-4xl md:text-5xl lg:text-6xl font-bold">
+      <h1 className="md:ml-[250px] font-playfair text-4xl md:text-5xl lg:text-6xl lg:text-center font-bold">
         VM Fashion <span className="font-normal">(JABEEN&apos;S)</span>
       </h1>
     </Link>

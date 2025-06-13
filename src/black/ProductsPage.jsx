@@ -16,7 +16,9 @@ function ProductsPage({ category }) {
   return (
     <Layout>
       <section className="w-full">
-        <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold mb-8">{title}</h2>
+        <h2 className="font-playfair text-5xl md:text-4xl lg:text-2xl font-bold mb-8">{title}</h2>
+
+
         {/* <ProductGrid category={category} /> */}
       </section>
     </Layout>
