@@ -361,7 +361,7 @@ liability shall be limited to the maximum extent permitted by law.
           ) : (
             <div>
               <h3 className="text-2xl font-playfair mb-4">About Us</h3>
-              <div className="flex gap-3 ">
+              <div className="flex gap-3  flex-wrap md:justfify-evenly">
                 <img src={image1}/>
                 <p>We are VM Fashion
 (formally Jabeens)
@@ -374,7 +374,7 @@ sophisticated and
 elegant ethnic wear for all occasions.</p>
                 </div>
 
-                <div className="flex gap-3 mt-4 ">
+                <div className="flex flex-wrap  gap-3 mt-4 md:justfify-evenly">
                 <p>We take pride in our
 products because they
 are made from the very
@@ -390,7 +390,7 @@ ethnic wear like ours.</p>
                 </div>
 
 
-                <div className="flex gap-3 mt-4 ">
+                <div className="flex flex-wrap gap-3 mt-4 md:justify-evenly ">
                 <img src={image2}/>
                 <p>Our aim is not only to
 provide high quality
