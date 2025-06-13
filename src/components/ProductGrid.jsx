@@ -16,6 +16,9 @@ import image11 from "../images/p27.webp"
 import image12 from "../images/p28.webp"
 import image13 from "../images/p29.webp"
 import image14 from "../images/p30.webp"
+import image15 from "../images/p31.webp"
+import { Link } from "react-router-dom"
+
 
 
 
@@ -172,11 +175,11 @@ const products = [
   },
   {
     id: 15,
-    name: "Dusty Pink Satin Lace Embroidered Light Weight Saree",
-    image: image12,
-    originalPrice: "£91",
-    salePrice: "£69",
-    discount: "24% Off",
+    name: "Dusty Pink Georgette Floral Print Saree For Sangeet",
+    image: image15,
+    originalPrice: "£127",
+    salePrice: "£84",
+    discount: "34% Off",
     colors: ["#1C2833", "#F4D03F", "#E8DAEF"],
     fastDelivery: true,
   },
@@ -195,6 +198,8 @@ export default function ProductGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       {products.map((product) => (
+        <Link to={`/women-product/${product.id}`}>
+
         <div key={product.id} className="group cursor-pointer">
           <div className=" my-5 relative overflow-hidden rounded-lg bg-gray-100 aspect-[3/4] mb-3">
             {/* Fast Delivery Badge */}
@@ -209,7 +214,7 @@ export default function ProductGrid() {
               src={product.image || "/placeholder.svg"}
               alt={product.name}
               className="w-full h-full  object-cover group-hover:scale-105 transition-transform duration-300"
-            />
+              />
 
             {/* Hover Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
@@ -232,9 +237,9 @@ export default function ProductGrid() {
               <div className="flex items-center gap-1">
                 {product.colors.map((color, index) => (
                   <div
-                    key={index}
-                    className="w-4 h-4 rounded-full border border-gray-300"
-                    style={{ backgroundColor: color }}
+                  key={index}
+                  className="w-4 h-4 rounded-full border border-gray-300"
+                  style={{ backgroundColor: color }}
                   />
                 ))}
               </div>
@@ -242,14 +247,15 @@ export default function ProductGrid() {
               <button
                 onClick={() => toggleWishlist(product.id)}
                 className="p-1 hover:bg-gray-100 rounded-full transition-colors"
-              >
+                >
                 <Heart
                   className={`w-4 h-4 ${wishlist.includes(product.id) ? "fill-red-500 text-red-500" : "text-gray-400"}`}
-                />
+                  />
               </button>
             </div>
           </div>
         </div>
+                  </Link>
       ))}
     </div>
   )

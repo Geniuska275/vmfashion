@@ -1,103 +1,107 @@
 
-// import { useState } from "react"
-import { Search, ShoppingBag, Heart, User, ChevronDown } from "lucide-react"
-import Navbar from "./components/Navbar"
+
 import CategoryCircles from "./components/CategoryCircles"
 import ProductGrid from "./components/ProductGrid"
 import Filters from "./components/Filters"
 import ProductListing from "./components/ProductListing"
 import Footer from "./components/Footer"
-import website from "./website.avif"
+// import website from "./website.avif"
+import { PiChats } from "react-icons/pi";
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import Chat from "./components/Chat"
+import Header from "./components/Header"
+import Homepage from "./pages/Homepage"
+import SareeCollection from "./pages/Saree"
+import LehengaCholiCollection from "./pages/Lehega"
+import IndoWestern from "./pages/IndoWestern"
+import Plus from "./pages/PlusSize"
+import Women from "./pages/women"
+import Men from "./pages/Men"
+import Kids from "./pages/Kids"
+import Jewellery from "./pages/Jewellery"
+import ChatBubble from "./components/ChatBubble"
+import Bridal from "./pages/Bridal"
+import ProductDetailPage from "./pages/ProductDetailsPage"
+import WomenDetailPage from "./pages/WomenDetailsPage"
+import KidsDetailPage from "./pages/KidsDetailsPage"
+import JewelleryDetailPage from "./pages/JewelleryDetailsPage"
+import Salwar from "./pages/Salwar"
 
 
 
 
-
-function App() {
-  // const [sortBy] = useState("Trending")
-
-  return (
-  <div className="flex justify-center items-center">
-      <div className=''>
-      <img src={website} className="w-[400px] h-[400px] md:ml-[100px] mt-5" />
-      <h1 className='text-3xl text-center mt-5'>We are building a fantastic website for you all,Stay tuned.</h1>
-      <h2 className='text-2xl text-center'>We are under construction and we will be up in few days.</h2>
-
-    </div>
-
-  </div>
-  )
-}
-
-export default  App
-// export default App
 // function App() {
-//   const [sortBy] = useState("Trending")
+//   // const [sortBy] = useState("Trending")
 
 //   return (
-//     <div className="min-h-screen bg-white">
-//       <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1>
-//       <div className=" sticky top-0 z-[1000]">
+//   <div className="flex justify-center items-center">
+//       <div className=''>
+//       <img src={website} className="w-[300px] h-[400px] md:ml-[100px] mt-5" />
+//       <h1 className='text-3xl text-center mt-5'>We are building a fantastic website for you all,Stay tuned.</h1>
+//       <h2 className='text-2xl text-center'>We are under construction and we will be up in few days.</h2>
 
-//       {/* Header */}
-//       <header className="border-b border-gray-200 bg-white">
-//         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-//           <div className="flex items-center">
-//             <img src={logo} className="w-15 h-10 mr-2 cover"  />
-//             <a href="/" className="mr-8">
-//               <h1 className="text-2xl font-bold tracking-tight">VMFASHION</h1>
-//             </a>
-//             <div className="relative hidden md:block">
-//               <input
-//                 type="text"
-//                 placeholder="Search Products..."
-//                 className="pl-4 pr-10 py-2 border border-gray-300 rounded-md w-[500px]"
-//                 />
-//               <Search className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
-//             </div>
-//           </div>
-//           <div className="flex items-center space-x-6">
-//             <a href="#" className="text-yellow-600 hidden md:block">
-//               Need Help?
-//             </a>
-//             <a href="#" className="text-gray-700">
-//               <User className="h-6 w-6" />
-//             </a>
-//             <a href="#" className="text-gray-700">
-//               <Heart className="h-6 w-6" />
-//             </a>
-//             <a href="#" className="text-gray-700">
-//               <ShoppingBag className="h-6 w-6" />
-//             </a>
-//             <div className="h-6 w-6 bg-green-600"></div>
-//           </div>
-//         </div>
-//       </header>
-//       <Navbar />
-//                 </div>
-
-
-//       {/* Breadcrumb */}
-//       <div className="container mx-auto px-4 py-4">
-//         <div className="flex items-center text-sm">
-//           <a href="/" className="text-gray-600">
-//             Andaaz Fashion
-//           </a>
-//           <span className="mx-2">→</span>
-//           <span className="font-medium">Women Ethnic Dresses</span>
-//         </div>
-//       </div>
-
-//       {/* Category Circles */}
-//       <CategoryCircles />
-
-//       {/* <ProductGrid/> */}
-//       <ProductListing/>
-
-//     <Footer/>
 //     </div>
+//       <div className="absolute right-3 bottom-2 flex justify-center items-center rounded w-[40px] h-[40px] bg-[#a22c47]">
+//         <PiChats />
+//       </div>
+//   </div>
 //   )
 // }
 
-// export default App
+// export default  App
+
+function App() {
+   
+
+  return (
+    <Router>
+
+    <div className="min-h-screen bg-white">
+      {/* <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1> */}
+         <Header/>
+         <Routes>
+          <Route path="/" element={<Homepage/>}/>
+          <Route path="/womens/sarees" element={<SareeCollection/>}/>
+          <Route path='/lehenga-choli' element={<LehengaCholiCollection/>}/>
+          <Route path='/womens/indowestern' element={<IndoWestern/>}/>
+          <Route path='/plus-size-dresses' element={<Plus/>}/>
+          <Route path='/women' element={<Women/>}/>
+           <Route path='/men' element={<Men/>}/>
+           <Route path='/kids' element={<Kids/>}/>
+           <Route path='/jewellery' element={<Jewellery/>}/>
+           <Route path='/bridal-dresses' element={<Bridal/>}/>
+           <Route path='/womens/salwar-kameez' element={<Salwar/>}/>
+
+           <Route path='/product/:id' element={<ProductDetailPage/>}/>
+           
+           <Route path='/kids-product/:id' element={<KidsDetailPage/>}/>
+           <Route path='/women-product/:id' element={<WomenDetailPage/>}/>
+           <Route path='/jewellery-product/:id' element={<JewelleryDetailPage/>}/>
+
+
+
+           
+
+
+
+           
+
+
+
+
+
+
+
+
+        
+
+         </Routes>
+        <ChatBubble/>
+        <Footer/>
+   </div>
+    </Router>)
+
+}
+
+export default App
 

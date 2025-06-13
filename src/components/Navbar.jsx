@@ -1,19 +1,20 @@
 
-
+import { Link } from "react-router-dom"
 import { useState } from "react" 
 
 const navItems = [
-  { name: "Wedding Store", href: "#" },
-  { name: "Salwar Kameez", href: "#" },
-  { name: "Bridal", href: "#", highlight: true },
-  { name: "Saree", href: "#" },
-  { name: "Lehenga", href: "#" },
-  { name: "Indo Western", href: "#" },
-  { name: "Plus Size", href: "#", highlight: true },
-  { name: "Women", href: "#" },
-  { name: "Men", href: "#" },
-  { name: "Kids", href: "#" },
-  { name: "Jewellery", href: "#" },
+  { name: "Wedding Store", href: "/" },
+  { name: "Salwar Kameez", href: "womens/salwar-kameez" },
+  { name: "Bridal", href: "/bridal-dresses", highlight: true },
+  { name: "Saree", href: "womens/sarees" },
+  { name: "Lehenga", href: "/lehenga-choli" },
+  { name: "Indo Western", href: "womens/indowestern" },
+  { name: "Plus Size", href: "/plus-size-dresses", highlight: true },
+  { name: "Women", href: "/women" },
+  { name: "Men", href: "/men" },
+  { name: "Kids", href: "/kids" },
+  { name: "Jewellery", href: "/Jewellery" },
+
 ]
 
 export default function Navbar() {
@@ -24,6 +25,8 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <ul className="flex items-center justify-center space-x-6 overflow-x-auto whitespace-nowrap py-4">
           {navItems.map((item) => (
+            <Link to={item.href}>
+
             <li key={item.name}>
               <a
                 href={item.href}
@@ -35,6 +38,7 @@ export default function Navbar() {
                 {item.name}
               </a>
             </li>
+          </Link>
           ))}
           <li>
             <a href="#" className="text-sm font-medium bg-yellow-600 text-white px-3 py-1 rounded">
