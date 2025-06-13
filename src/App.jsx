@@ -1,31 +1,31 @@
 
 
-import CategoryCircles from "./components/CategoryCircles"
-import ProductGrid from "./components/ProductGrid"
-import Filters from "./components/Filters"
-import ProductListing from "./components/ProductListing"
-import Footer from "./components/Footer"
-// import website from "./website.avif"
-import { PiChats } from "react-icons/pi";
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
-import Chat from "./components/Chat"
-import Header from "./components/Header"
-import Homepage from "./pages/Homepage"
-import SareeCollection from "./pages/Saree"
-import LehengaCholiCollection from "./pages/Lehega"
-import IndoWestern from "./pages/IndoWestern"
-import Plus from "./pages/PlusSize"
-import Women from "./pages/women"
-import Men from "./pages/Men"
-import Kids from "./pages/Kids"
-import Jewellery from "./pages/Jewellery"
-import ChatBubble from "./components/ChatBubble"
-import Bridal from "./pages/Bridal"
-import ProductDetailPage from "./pages/ProductDetailsPage"
-import WomenDetailPage from "./pages/WomenDetailsPage"
-import KidsDetailPage from "./pages/KidsDetailsPage"
-import JewelleryDetailPage from "./pages/JewelleryDetailsPage"
-import Salwar from "./pages/Salwar"
+// import CategoryCircles from "./components/CategoryCircles"
+// import ProductGrid from "./components/ProductGrid"
+// import Filters from "./components/Filters"
+// import ProductListing from "./components/ProductListing"
+// import Footer from "./components/Footer"
+
+// import { PiChats } from "react-icons/pi";
+// import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+// import Chat from "./components/Chat"
+// import Header from "./components/Header"
+// import Homepage from "./pages/Homepage"
+// import SareeCollection from "./pages/Saree"
+// import LehengaCholiCollection from "./pages/Lehega"
+// import IndoWestern from "./pages/IndoWestern"
+// import Plus from "./pages/PlusSize"
+// import Women from "./pages/women"
+// import Men from "./pages/Men"
+// import Kids from "./pages/Kids"
+// import Jewellery from "./pages/Jewellery"
+// import ChatBubble from "./components/ChatBubble"
+// import Bridal from "./pages/Bridal"
+// import ProductDetailPage from "./pages/ProductDetailsPage"
+// import WomenDetailPage from "./pages/WomenDetailsPage"
+// import KidsDetailPage from "./pages/KidsDetailsPage"
+// import JewelleryDetailPage from "./pages/JewelleryDetailsPage"
+// import Salwar from "./pages/Salwar"
 
 
 
@@ -50,33 +50,33 @@ import Salwar from "./pages/Salwar"
 
 // export default  App
 
-function App() {
+// function App() {
    
 
-  return (
-    <Router>
+//   return (
+//     <Router>
 
-    <div className="min-h-screen bg-white">
-      {/* <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1> */}
-         <Header/>
-         <Routes>
-          <Route path="/" element={<Homepage/>}/>
-          <Route path="/womens/sarees" element={<SareeCollection/>}/>
-          <Route path='/lehenga-choli' element={<LehengaCholiCollection/>}/>
-          <Route path='/womens/indowestern' element={<IndoWestern/>}/>
-          <Route path='/plus-size-dresses' element={<Plus/>}/>
-          <Route path='/women' element={<Women/>}/>
-           <Route path='/men' element={<Men/>}/>
-           <Route path='/kids' element={<Kids/>}/>
-           <Route path='/jewellery' element={<Jewellery/>}/>
-           <Route path='/bridal-dresses' element={<Bridal/>}/>
-           <Route path='/womens/salwar-kameez' element={<Salwar/>}/>
+//     <div className="min-h-screen bg-white">
+//       {/* <h1 className="bg-black py-2 text-center text-white text-yellow-400">Customised Product,Whatsapp +157890004484</h1> */}
+//          <Header/>
+//          <Routes>
+//           <Route path="/" element={<Homepage/>}/>
+//           <Route path="/womens/sarees" element={<SareeCollection/>}/>
+//           <Route path='/lehenga-choli' element={<LehengaCholiCollection/>}/>
+//           <Route path='/womens/indowestern' element={<IndoWestern/>}/>
+//           <Route path='/plus-size-dresses' element={<Plus/>}/>
+//           <Route path='/women' element={<Women/>}/>
+//            <Route path='/men' element={<Men/>}/>
+//            <Route path='/kids' element={<Kids/>}/>
+//            <Route path='/jewellery' element={<Jewellery/>}/>
+//            <Route path='/bridal-dresses' element={<Bridal/>}/>
+//            <Route path='/womens/salwar-kameez' element={<Salwar/>}/>
 
-           <Route path='/product/:id' element={<ProductDetailPage/>}/>
+//            <Route path='/product/:id' element={<ProductDetailPage/>}/>
            
-           <Route path='/kids-product/:id' element={<KidsDetailPage/>}/>
-           <Route path='/women-product/:id' element={<WomenDetailPage/>}/>
-           <Route path='/jewellery-product/:id' element={<JewelleryDetailPage/>}/>
+//            <Route path='/kids-product/:id' element={<KidsDetailPage/>}/>
+//            <Route path='/women-product/:id' element={<WomenDetailPage/>}/>
+//            <Route path='/jewellery-product/:id' element={<JewelleryDetailPage/>}/>
 
 
 
@@ -95,13 +95,42 @@ function App() {
 
         
 
-         </Routes>
-        <ChatBubble/>
-        <Footer/>
-   </div>
-    </Router>)
+//          </Routes>
+//         <ChatBubble/>
+//         <Footer/>
+//    </div>
+//     </Router>)
 
+// }
+
+// export default App
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import HomePage from "./black/HomePage"
+import AboutPage from "./black/AboutPage"
+import ProductsPage from "./black/ProductsPage"
+import ContactPage from "./black/ContactPage"
+import NotFoundPage from "./black/NotFoundPage"
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/made-to-measure" element={<ProductsPage category="made-to-measure" />} />
+        <Route path="/lehengas" element={<ProductsPage category="lehengas" />} />
+        <Route path="/anarkalis" element={<ProductsPage category="anarkalis" />} />
+        <Route path="/sararas" element={<ProductsPage category="sararas" />} />
+        <Route path="/drapes" element={<ProductsPage category="drapes" />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/terms" element={<AboutPage section="terms" />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App
-
