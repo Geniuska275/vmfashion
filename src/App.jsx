@@ -112,6 +112,11 @@ import AboutPage from "./black/AboutPage"
 import ProductsPage from "./black/ProductsPage"
 import ContactPage from "./black/ContactPage"
 import NotFoundPage from "./black/NotFoundPage"
+import Lehenga from "./black/lehenga"
+import Drape from "./black/Drapes"
+import Anarkalis from "./black/Anarkailis"
+import Sararis from "./black/Sararis"
+import Made from "./black/Made"
 
 function App() {
   return (
@@ -120,11 +125,11 @@ function App() {
         <Route path="/" element={<AboutPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/products" element={<ProductsPage />} />
-        <Route path="/made-to-measure" element={<ProductsPage category="made-to-measure" />} />
-        <Route path="/lehengas" element={<ProductsPage category="lehengas" />} />
-        <Route path="/anarkalis" element={<ProductsPage category="anarkalis" />} />
-        <Route path="/sararas" element={<ProductsPage category="sararas" />} />
-        <Route path="/drapes" element={<ProductsPage category="drapes" />} />
+        <Route path="/products/made-to-measure" element={<Made/>} />
+        <Route path="/products/lehengas" element={<Lehenga/>} />
+        <Route path="/products/anarkalis" element={<Anarkalis />} />
+        <Route path="/products/sararas" element={<Sararis/>} />
+        <Route path="/products/drapes" element={<Drape/>} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/terms" element={<AboutPage section="terms" />} />
         <Route path="*" element={<NotFoundPage />} />
