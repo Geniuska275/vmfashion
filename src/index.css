@@ -32,4 +32,8 @@ body {
     flex-direction: column;
     gap:10px;
   }
+  .a{
+    width: 600px;
+    height: 450px;
+  }
 }

@@ -362,8 +362,8 @@ liability shall be limited to the maximum extent permitted by law.
             <div>
               <h3 className="text-2xl font-playfair mb-4">About Us</h3>
               <div className="flex about gap-3 justfify-evenly ">
-                <img src={image1}/>
-                <p className="text-3xl leading-10 "> We are VM Fashion
+                <img src={image1} className="w-[300px] a h-[200px] rounded-lg"/>
+                <p className="text-3xl leading-[50px] font-[Poppins] mt-3"> We are VM Fashion
 (formally Jabeens)
 established in ...........
 A family run business in
@@ -375,7 +375,7 @@ elegant ethnic wear for all occasions.</p>
                 </div>
 
                 <div className="flex about justfify-evenly my-[60px] gap-2">
-                <p className="text-3xl leading-10">We take pride in our
+                <p className="text-3xl leading-[50px] font-[Poppins]">We take pride in our
 products because they
 are made from the very
 best fabric, stitching
@@ -386,12 +386,12 @@ range. From the design
 to the fitting, we know
 it will be hard to find
 ethnic wear like ours.</p>
-                <img src={image3}/>
+                <img src={image3} className=" a w-[300px] h-[250px] rounded-lg" />
                 </div>
 
 {/*  */}
                 <div className="flex  about justify-evenly my-[60px] ">
-                <p className="leading-10 text-3xl">Our aim is not only to
+                <p className="leading-10 text-3xl font-[Poppins]">Our aim is not only to
 provide high quality
 clothing but to keep up-
 to-date with the latest
@@ -403,8 +403,8 @@ custom make outfits too.
 Our passion shows in our
 clothing so please do
 visit our store or shop
-online to find your dream fit</p>
-                <img src={image2}/>
+online to find your dream outfit.</p>
+                <img  src={image2} className=" a w-[300px] h-[200px] rounded-lg"/>
                 </div>
              
               {/* More about content would go here */}
