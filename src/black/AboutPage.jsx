@@ -386,7 +386,7 @@ range. From the design
 to the fitting, we know
 it will be hard to find
 ethnic wear like ours.</p>
-                <img src={image3} className=" a w-[300px] h-[250px] rounded-lg" />
+                <img src={image2} className=" a w-[200px] h-[200px] rounded-lg" />
                 </div>
 
 {/*  */}
@@ -404,7 +404,7 @@ Our passion shows in our
 clothing so please do
 visit our store or shop
 online to find your dream outfit.</p>
-                <img  src={image2} className=" a w-[300px] h-[200px] rounded-lg"/>
+                <img  src={image3} className=" a w-[300px] h-[200px] rounded-lg"/>
                 </div>
              
               {/* More about content would go here */}
