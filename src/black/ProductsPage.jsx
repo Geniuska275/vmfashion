@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Layout from "./Layout"
 import ProductGrid from "./ProductGrid"
 
@@ -17,22 +18,22 @@ function ProductsPage({ category }) {
     <Layout>
       <section className="w-full">
         <h2 className="font-playfair text-2xl md:text-4xl lg:text-2xl font-bold mb-8">{title}</h2>
-        <ul>
-          <li className="mb-4">
-            <a href="/products/made-to-measure" className="text-yellow-500 hover:underline">Made to Measure Dresses</a>
-          </li>
-          <li className="mb-4">
-            <a href="/products/lehengas" className="text-yellow-500 hover:underline">Lehengas</a>
-          </li>
-          <li className="mb-4">
-            <a href="/products/anarkalis" className="text-yellow-500 hover:underline">Anarkalis</a>
-          </li>
-          <li className="mb-4">
-            <a href="/products/sararas" className="text-yellow-500 hover:underline">Sararas</a>
-          </li>
-          <li className="mb-4">
-            <a href="/products/drapes" className="text-yellow-500 hover:underline">Drapes</a>
-          </li>
+        <ul className="flex flex-col">
+          <Link to="/products/made-to-measure" className="mb-4">
+            <a  className="text-yellow-500 hover:underline">Made to Measure Dresses</a>
+          </Link>
+          <Link to="/products/lehengas" className="mb-4">
+            <a className="text-yellow-500 hover:underline">Lehengas</a>
+          </Link>
+          <Link to='/products/anarkalis' className="mb-4">
+            <a  className="text-yellow-500 hover:underline">Anarkalis</a>
+          </Link>
+          <Link to='/products/sararas' className="mb-4">
+            <a  className="text-yellow-500 hover:underline">Sararas</a>
+          </Link>
+          <Link to='/products/drapes' className="mb-4">
+            <a  className="text-yellow-500 hover:underline">Drapes</a>
+          </Link>
         </ul>
 
 
