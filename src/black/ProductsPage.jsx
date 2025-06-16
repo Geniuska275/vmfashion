@@ -16,7 +16,7 @@ function ProductsPage({ category }) {
   return (
     <Layout>
       <section className="w-full">
-        <h2 className="font-playfair text-5xl md:text-4xl lg:text-2xl font-bold mb-8">{title}</h2>
+        <h2 className="font-playfair text-2xl md:text-4xl lg:text-2xl font-bold mb-8">{title}</h2>
         <ul>
           <li className="mb-4">
             <a href="/products/made-to-measure" className="text-yellow-500 hover:underline">Made to Measure Dresses</a>
