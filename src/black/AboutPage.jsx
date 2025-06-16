@@ -1,7 +1,7 @@
 import Layout from "./Layout"
-import image1 from "./q1.jpeg"
-import image3 from "./q3.jpeg"
-import image2 from "./q2.jpeg"
+import image1 from "./n1.jpeg"
+import image3 from "./n3.jpeg"
+import image2 from "./n2.jpeg"
 
 
 function AboutPage({ section }) {
@@ -361,9 +361,9 @@ liability shall be limited to the maximum extent permitted by law.
           ) : (
             <div>
               <h3 className="text-2xl font-playfair mb-4">About Us</h3>
-              <div className="flex gap-3  flex-wrap md:justfify-evenly">
+              <div className="flex about gap-3 justfify-evenly ">
                 <img src={image1}/>
-                <p>We are VM Fashion
+                <p className="text-3xl leading-10 "> We are VM Fashion
 (formally Jabeens)
 established in ...........
 A family run business in
@@ -374,8 +374,8 @@ sophisticated and
 elegant ethnic wear for all occasions.</p>
                 </div>
 
-                <div className="flex flex-wrap  gap-3 mt-4 md:justfify-evenly">
-                <p>We take pride in our
+                <div className="flex about justfify-evenly my-[60px] gap-2">
+                <p className="text-3xl leading-10">We take pride in our
 products because they
 are made from the very
 best fabric, stitching
@@ -389,10 +389,9 @@ ethnic wear like ours.</p>
                 <img src={image3}/>
                 </div>
 
-
-                <div className="flex flex-wrap gap-3 mt-4 md:justify-evenly ">
-                <img src={image2}/>
-                <p>Our aim is not only to
+{/*  */}
+                <div className="flex  about justify-evenly my-[60px] ">
+                <p className="leading-10 text-3xl">Our aim is not only to
 provide high quality
 clothing but to keep up-
 to-date with the latest
@@ -404,7 +403,8 @@ custom make outfits too.
 Our passion shows in our
 clothing so please do
 visit our store or shop
-online to find your</p>
+online to find your dream fit</p>
+                <img src={image2}/>
                 </div>
              
               {/* More about content would go here */}

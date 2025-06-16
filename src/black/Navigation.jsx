@@ -11,11 +11,11 @@ function Navigation({ className }) {
   const navItems = [
     { name: "About Us", href: "/about" },
     { name: "Product Catalogue", href: "/products" },
-    { name: "Made to Measure Dresses", href: "/made-to-measure" },
-    { name: "Lehengas", href: "/lehengas" },
-    { name: "Anarkalis", href: "/anarkalis" },
-    { name: "Sararas", href: "/sararas" },
-    { name: "Drapes", href: "/drapes" },
+    // { name: "Made to Measure Dresses", href: "/made-to-measure" },
+    // { name: "Lehengas", href: "/lehengas" },
+    // { name: "Anarkalis", href: "/anarkalis" },
+    // { name: "Sararas", href: "/sararas" },
+    // { name: "Drapes", href: "/drapes" },
     { name: "Contact Us", href: "/contact" },
     { name: "Terms and Conditions", href: "/terms" },
   ]
