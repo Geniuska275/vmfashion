@@ -5,7 +5,7 @@ function ContactPage() {
   return (
     <Layout>
       <section className="w-full">
-        <h2 className="font-playfair text-5xl md:text-xl lg:text-xl font-bold mb-8">Contact Us</h2>
+        <h2 className="font-playfair text-2xl md:text-xl lg:text-xl font-bold mb-8">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-2xl font-playfair mb-4">Address:</h3>
