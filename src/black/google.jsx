@@ -14,7 +14,7 @@ const center = {
 
 const MapComponent = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: 'AIzaSyDkAQgjPFkuPu73f6RZZK-PzmA7dvPwZII', // Replace with your key
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_API, // Replace with your key
   });
 
   if (loadError) return <div>Error loading maps</div>;
