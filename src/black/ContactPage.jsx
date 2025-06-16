@@ -1,3 +1,4 @@
+import MapComponent from "./google"
 import Layout from "./Layout"
 
 function ContactPage() {
@@ -25,7 +26,7 @@ HA0 4BP
              Saturday:<br/>
              Sunday and Bank Holidays:<br/>
             </p>
-           
+           <MapComponent/>
           </div>
           <form className="space-y-4">
             <div>
