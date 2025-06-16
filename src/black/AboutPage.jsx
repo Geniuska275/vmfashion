@@ -363,7 +363,7 @@ liability shall be limited to the maximum extent permitted by law.
               <h3 className="text-2xl font-playfair mb-4">About Us</h3>
               <div className="flex about gap-3 justfify-evenly ">
                 <img src={image1} className="w-[300px] a h-[200px] rounded-lg"/>
-                <p className=" text-xl md:text-2xl leading-[50px] font-[Poppins] mt-3"> We are VM Fashion
+                <p className=" leading-5  text-xl md:text-2xl  md:leading-[50px] font-[Poppins] mt-3"> We are VM Fashion
 (formally Jabeens)
 established in ...........
 A family run business in
@@ -375,7 +375,7 @@ elegant ethnic wear for all occasions.</p>
                 </div>
 
                 <div className="flex about justfify-evenly my-[60px] gap-2">
-                <p className="text-xl md:text-2xl leading-[50px] font-[Poppins]">We take pride in our
+                <p className="leading-5  text-xl md:text-2xl md:leading-[50px] font-[Poppins]">We take pride in our
 products because they
 are made from the very
 best fabric, stitching
@@ -391,7 +391,7 @@ ethnic wear like ours.</p>
 
 {/*  */}
                 <div className="flex  about justify-evenly my-[60px] gap-2 ">
-                <p className="leading-10 text-xl md:text-2xl font-[Poppins]">Our aim is not only to
+                <p className="leading-5 md:leading-10 text-xl md:text-2xl font-[Poppins]">Our aim is not only to
 provide high quality
 clothing but to keep up-
 to-date with the latest
