@@ -17,14 +17,14 @@ London
 HA0 4BP
             </p>
             <p className="mb-4">
-              Email:<br/>
+              Email:vmfashionuk@gmail.com<br/>
               Phone: 020 8900 1353<br></br>
             </p>
               <h2>Opening Hours</h2>
              <p className="mb-4">
-              Monday - Friday:<br/>
-             Saturday:<br/>
-             Sunday and Bank Holidays:<br/>
+              Monday - Friday: 9:30 - 19:30<br/>
+             Saturday: 9:30 - 19:30<br/>
+             Sunday and Bank Holidays:9:30 - 19:30<br/>
             </p>
            <MapComponent/>
           </div>
