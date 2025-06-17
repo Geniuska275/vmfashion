@@ -1,9 +1,60 @@
+
+
+import { useRef,useState } from "react";
 import MapComponent from "./google"
 import Layout from "./Layout"
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function ContactPage() {
+  const [name,setName]=useState("")
+  
+
+  const [email,setEmail]=useState("")
+  const [message,setMessage]=useState("")
+
+  console.log(name,email,message)
+
+
+
+   const templateParams={
+    from_name:name,
+    from_email:email,
+    to_name:"Vm Fashion",
+    subject:"Contact Vm Fashion",
+    message:message,
+
+  }
+  
+  const sendEmail = (e) => {
+    const public_key="LP_gdQVqVkKCNgmIL"
+    e.preventDefault();
+
+    emailjs
+      .send('service_zvdl20p', 'template_fva1ypj', 
+        templateParams,
+      ""
+      )
+      .then(
+        () => {
+          toast.success("Email Sent to Vm Fashion")
+          setName(" ")
+          setEmail(" ")
+          setMessage(" ")
+         
+        },
+
+        (error) => {
+          toast.error("Email Not Sent to Vm Fashion")
+          console.log('FAILED...', error);
+        },
+      );
+  };
   return (
     <Layout>
+      <ToastContainer />
       <section className="w-full">
         <h2 className="font-playfair text-2xl md:text-xl lg:text-xl font-bold mb-8">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -22,9 +73,9 @@ HA0 4BP
             </p>
               <h2>Opening Hours</h2>
              <p className="mb-4">
-              Monday - Friday: 9:30 - 19:30<br/>
-             Saturday: 9:30 - 19:30<br/>
-             Sunday and Bank Holidays:9:30 - 19:30<br/>
+              Monday - Saturday: 9:30 - 19:30<br/>
+             Sunday: 11:00 - 17:00<br/>
+             Bank Holidays:opening time varies ,check with store.<br/>
             </p>
            <MapComponent/>
           </div>
@@ -60,6 +111,7 @@ HA0 4BP
               ></textarea>
             </div>
             <button
+              onClick={sendEmail}
               type="submit"
               className="px-6 py-2 bg-amber-300 text-black font-medium rounded-md hover:bg-amber-200 transition-colors"
             >
