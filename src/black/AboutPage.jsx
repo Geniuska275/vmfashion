@@ -365,7 +365,7 @@ liability shall be limited to the maximum extent permitted by law.
                 <img src={image1} className="w-[300px] a h-[200px] rounded-lg"/>
                 <p className=" leading-8 text-justify text-xl md:text-2xl  md:leading-[50px] font-[Poppins] mt-3"> We are VM Fashion
 (formally Jabeens)
-established in ...........
+established in 1890s.
 A family run business in
 the heart of Wembley.
 We pride ourselves in

@@ -18,7 +18,7 @@ function ProductsPage({ category }) {
     <Layout>
       <section className="w-full">
         <h2 className="font-playfair text-2xl md:text-4xl lg:text-2xl font-bold mb-8">{title}</h2>
-        <ul className="flex flex-col">
+        {/* <ul className="flex flex-col">
           <Link to="/products/made-to-measure" className="mb-4">
             <a  className="text-yellow-500 hover:underline">Made to Measure Dresses</a>
           </Link>
@@ -34,10 +34,10 @@ function ProductsPage({ category }) {
           <Link to='/products/drapes' className="mb-4">
             <a  className="text-yellow-500 hover:underline">Drapes</a>
           </Link>
-        </ul>
+        </ul> */}
 
 
-        {/* <ProductGrid category={category} /> */}
+        <ProductGrid  />
       </section>
     </Layout>
   )
