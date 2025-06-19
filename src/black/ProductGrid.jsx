@@ -16,6 +16,7 @@ import img6 from "./p6.jpeg";
 import img7 from "./p7.jpeg";
 
 import img8 from "./p8.jpeg";
+import { Link } from "react-router-dom";
 
 
 
@@ -60,9 +61,11 @@ function ProductGrid({ category }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {products.map((product) => {
-          console.log(product)
-       return <div key={product.id} className=" p-4 rounded-lg shadow-md">
+      {products.map((product) =>(
+          
+        <Link to={`/product/${product.id}`}>
+
+       <div key={product.id} className=" p-4 rounded-lg shadow-md">
           <img
             src={product.img}
             
@@ -70,7 +73,8 @@ function ProductGrid({ category }) {
             />
          
         </div>
-          }
+            </Link>
+      )
       )}
      
     </div>

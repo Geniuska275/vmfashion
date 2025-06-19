@@ -117,6 +117,7 @@ import Drape from "./black/Drapes"
 import Anarkalis from "./black/Anarkailis"
 import Sararis from "./black/Sararis"
 import Made from "./black/Made"
+import ProductDetails from "./black/ProductDetails"
 
 function App() {
   return (
@@ -131,6 +132,8 @@ function App() {
         <Route path="/products/sararas" element={<Sararis/>} />
         <Route path="/products/drapes" element={<Drape/>} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+
         <Route path="/terms" element={<AboutPage section="terms" />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
