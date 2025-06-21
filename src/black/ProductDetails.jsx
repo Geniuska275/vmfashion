@@ -62,7 +62,7 @@ function ProductDetails() {
   return (
     <Layout>
     <div>
-     <img src={product.img} className='w-[400px] h-[500px] rounded-md'/>
+     <img src={product.img} className='w-[400px] h-[500px] rounded-md mb-3'/>
     </div>
     </Layout>
   )
