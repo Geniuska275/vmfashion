@@ -55,7 +55,7 @@ function ContactPage() {
   return (
     <Layout>
       <ToastContainer />
-      <section className="w-full">
+      <section className="w-full mb-4 md:mb-8 lg:mb-8">
         <h2 className="font-playfair text-2xl md:text-xl lg:text-xl font-bold mb-8">Contact Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
