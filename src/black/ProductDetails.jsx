@@ -58,7 +58,7 @@ function ProductDetails() {
       ]
 
       const product=products.find(product=>product.id===+id)
-      console.log(product)
+    
   return (
     <Layout>
     <div>
