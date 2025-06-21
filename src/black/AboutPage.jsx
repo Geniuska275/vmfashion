@@ -391,6 +391,7 @@ ethnic wear like ours.</p>
 
 {/*  */}
                 <div className="flex  about justify-evenly my-[60px] gap-3 ">
+                <img  src={image3} className=" a w-[300px] h-[200px] rounded-lg"/>
                 <p className="leading-8 text-justify md:leading-10 text-xl md:text-2xl font-[Poppins]">Our aim is not only to
 provide high quality
 clothing but to keep up-
@@ -404,7 +405,6 @@ Our passion shows in our
 clothing so please do
 visit our store or shop
 online to find your dream outfit.</p>
-                <img  src={image3} className=" a w-[300px] h-[200px] rounded-lg"/>
                 </div>
              
               {/* More about content would go here */}
