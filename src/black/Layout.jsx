@@ -3,6 +3,7 @@
 import { useEffect } from "react"
 import Navigation from "./Navigation"
 import Logo from "./Logo"
+import Footer from "./Footer"
 
 function Layout({ children }) {
   useEffect(() => {
@@ -21,6 +22,7 @@ function Layout({ children }) {
           <Navigation className="w-full md:w-1/4" />
           <main className="w-full md:w-3/4">{children}</main>
         </div>
+        <Footer className="mt-12" />
       </div>
     </div>
   )
