@@ -6,6 +6,7 @@ body {
   font-family: "Inter", sans-serif;
   padding: 0px;
   margin: 0px;
+  animation: spin 5s linear infinite;
 }
 .Hero{
     width: 100%;
@@ -36,4 +37,10 @@ body {
     width: 600px;
     height: 450px;
   }
+}
+
+@keyframes spin{
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+
 }
